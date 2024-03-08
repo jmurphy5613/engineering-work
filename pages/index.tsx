@@ -75,9 +75,9 @@ const gridItems: GridItem[] = [
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Stuff I've worked on!</h1>
-      {gridItems.map((item) => (
-        <div className={styles["grid-item"]}>
+      <h1 className={styles.title}>{`Stuff I've worked on!`}</h1>
+      {gridItems.map((item, index) => (
+        <div className={styles["grid-item"]} key={index}>
           <Carousel
             responsive={{
               desktop: {
